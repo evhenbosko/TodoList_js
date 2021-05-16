@@ -9,7 +9,12 @@ todoButton.addEventListener('click',addTodo);
 todoList.addEventListener('click',deleteCheck);
 filterOption.addEventListener('click',filterTodo);
 //functions
+for(let a=1;a<100;a++){
+fetch('https://jsonplaceholder.typicode.com/todos/'+a)
+.then(response => response.json())
+.then(json => console.log(json))}
 function addTodo(event){
+    
     event.preventDefault();
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
